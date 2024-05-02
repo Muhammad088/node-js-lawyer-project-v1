@@ -80,7 +80,7 @@ const taskSchema = Schema(
 taskSchema.pre(/^find/, function (next) {
   this.populate({
     path: `creatorUserId`,
-    select: "name lawyerNumber",
+    select: "name lawyerNumber profileImg",
   });
   next();
 });
